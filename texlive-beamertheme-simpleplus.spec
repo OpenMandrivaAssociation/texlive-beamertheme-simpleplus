@@ -1,6 +1,6 @@
 Name:		texlive-beamertheme-simpleplus
 Version:	64770
-Release:	1
+Release:	2
 Summary:	A simple and clean theme for LaTeX beamer
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/beamertheme-simpleplus

@@ -3,7 +3,7 @@ Version:	64770
 Release:	2
 Summary:	A simple and clean theme for LaTeX beamer
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/beamertheme-simpleplus
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/beamertheme-simpleplus
 License:	pd
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamertheme-simpleplus.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamertheme-simpleplus.doc.r%{version}.tar.xz

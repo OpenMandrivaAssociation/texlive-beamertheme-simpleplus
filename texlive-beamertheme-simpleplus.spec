@@ -1,37 +1,23 @@
-Name:		texlive-beamertheme-simpleplus
-Version:	64770
-Release:	2
+%global tl_name beamertheme-simpleplus
+%global tl_revision 73362
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.1
+Release:	%{tl_revision}.1
 Summary:	A simple and clean theme for LaTeX beamer
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/beamertheme-simpleplus
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/beamer-contrib/themes/beamertheme-simpleplus
 License:	pd
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamertheme-simpleplus.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamertheme-simpleplus.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/beamertheme-simpleplus.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/beamertheme-simpleplus.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This package provides a simple and clean theme for LaTeX
-Beamer. It can be used for academic and scientific
-presentations.
+This package provides a simple and clean theme for LaTeX Beamer. It can
+be used for academic and scientific presentations.
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/tex/latex/beamertheme-simpleplus
-%doc %{_texmfdistdir}/doc/latex/beamertheme-simpleplus
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
